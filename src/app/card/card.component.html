@@ -1,32 +1,38 @@
-<div class="pokemon-card">
-  <mat-card>
-    <div class="pokemon-avatar">
-      <h2 style="margin-left: 20px; ">{{ pokemon.id }}</h2>
-   
-    <div>
-      <h3 style="margin-left: 30px; font-weight: bold; margin-top: -6px ;margin-bottom: -6px;">{{ pokemon.name }}</h3>
-      <p style="margin-left: 30px;">{{ pokemon.firstType}}<span *ngIf="pokemon.secondType">/{{ pokemon.secondType }}</span></p>
+<div style="height: 100%; width: 100%;">
+    <div class="pokemon-card">
+      <mat-card>
+        <div style="height: 50px; width: 100%;">
+          <div style="float: left; width: 20%;">
+            <div class="pokemon-avatar">
+              <img style="height: 100%; width: 100%; " [src]="'../assets/pokemon/'+pokemon.id+'.png'" />
+            </div>
+          </div>
+
+          <div style="float: right; width: 80%; height: 50px;">
+            {{ pokemon.name }}<br>
+            {{ pokemon.firstType}}<span *ngIf="pokemon.secondType">/{{ pokemon.secondType }}</span>
+
+          </div>
+        </div>
+
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Basic Status
+            </mat-panel-title>
+
+
+          </mat-expansion-panel-header>
+          <p>HP: {{ pokemon.hp }}</p>
+          <p>Attack: {{ pokemon.attack }}</p>
+          <p>Defense: {{ pokemon.defense }}</p>
+
+        </mat-expansion-panel>
+        <mat-card-actions>
+          <button mat-raised-button color="accent" (click)="detailClicked()">
+            Detail
+          </button>
+        </mat-card-actions>
+      </mat-card>
     </div>
   </div>
-    <mat-accordion>
-      <mat-expansion-panel>
-        <mat-expansion-panel-header>
-          <mat-panel-title>
-            Basic Status
-          </mat-panel-title>
-
-
-        </mat-expansion-panel-header>
-        <p>HP: {{ pokemon.hp }}</p>
-        <p>Attack: {{ pokemon.attack }}</p>
-        <p>Defense: {{ pokemon.defense }}</p>
-
-      </mat-expansion-panel>
-    </mat-accordion>
-    <mat-card-actions>
-      <button mat-raised-button color="accent" (click)="detailClicked()">
-        Detail
-      </button>
-    </mat-card-actions>
-  </mat-card>
-</div>

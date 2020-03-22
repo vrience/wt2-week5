@@ -20,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'wt2-genap1920-week5'`, () => {
+  it(`should have as title 'Project-Wt2-Juvrience'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('wt2-genap1920-week5');
+    expect(app.title).toEqual('Project-Wt2-Juvrience');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('wt2-genap1920-week5 app is running!');
+    expect(compiled.querySelector('.content span').textContent).toContain('Project-Wt2-Juvrience app is running!');
   });
 });

@@ -15,7 +15,6 @@
       color: white;
       margin: auto;
       text-align: center;
-      margin-bottom: -10;
     }
 
   }
@@ -24,24 +23,7 @@
     color: gray;
     
   }
-  .container{
-  height: 50px;
-  width: 100%;
-  }
-  .column1{
-    height: 50;
-    width: 20%;
-    float: left;
-  }
-  .column2{
-    height: 50;
-    width: 80%;
-    float: right;
-  }
-  .img{
-    height: 50;
-    width: 20;
-  }
+  
   mat-card-actions {
     text-align: right;
   }
